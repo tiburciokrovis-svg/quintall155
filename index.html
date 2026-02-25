@@ -1,238 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quintal 155 | Menu</title>
-    <style>
-        :root {
-            --primary: #d35400; /* Laranja Brasa */
-            --dark: #1a1a1a;
-            --bg: #fdfcfb;
-            --text: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quintal 155 | Restaurante</title>
 
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
 
-        header h1 { font-size: 3.5rem; margin: 0; letter-spacing: 2px; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
+body{
+background:#0f0f0f;
+color:white;
+}
 
-        nav {
-            background: var(--dark);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            text-align: center;
-        }
+.topbar{
+background:#000;
+padding:10px;
+text-align:center;
+font-size:14px;
+color:#ff9500;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            transition: color 0.3s;
-        }
+header{
+height:85vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1550547660-d9450f859349');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
 
-        nav a:hover { color: var(--primary); }
+header h1{
+font-size:48px;
+color:#ff7b00;
+}
 
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+header p{
+margin-top:10px;
+color:#ddd;
+}
 
-        h2 {
-            text-align: center;
-            color: var(--primary);
-            text-transform: uppercase;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 50px;
-        }
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#ff7b00;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:0.3s;
+}
 
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
+.btn:hover{
+background:#ff9500;
+}
 
-        .item-card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--primary);
-        }
+section{
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
 
-        .item-card h3 { margin: 0 0 10px 0; font-size: 1.2rem; color: var(--dark); }
-        .item-card p { font-size: 0.9rem; color: #666; margin: 0; }
-        
-        .list-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#ff7b00;
+}
 
-        .simple-list { list-style: none; padding: 0; }
-        .simple-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-        }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
 
-        .badge {
-            font-size: 0.75rem;
-            background: #f0f0f0;
-            padding: 2px 8px;
-            border-radius: 20px;
-            color: #777;
-        }
+.card{
+background:#1c1c1c;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
+transition:0.3s;
+}
 
-        footer {
-            background: var(--dark);
-            color: #888;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-        }
+.card:hover{
+transform:translateY(-5px);
+}
 
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.5rem; }
-            nav { overflow-x: auto; white-space: nowrap; padding: 15px 10px; }
-        }
-    </style>
+.card h3{
+color:#ff9500;
+margin-bottom:10px;
+}
+
+.price{
+color:#00ff88;
+font-weight:bold;
+margin:10px 0;
+}
+
+.order-btn{
+display:inline-block;
+padding:8px 15px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:20px;
+font-size:14px;
+}
+
+.info{
+background:#1a1a1a;
+padding:40px 20px;
+text-align:center;
+}
+
+iframe{
+width:100%;
+height:300px;
+border:none;
+border-radius:10px;
+margin-top:20px;
+}
+
+footer{
+background:#000;
+text-align:center;
+padding:30px;
+color:#aaa;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+@media(max-width:600px){
+header h1{
+font-size:34px;
+}
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>QUINTAL 155</h1>
-    <p>Hambúrgueres Artesanais & Petiscos Raiz</p>
-</header>
-
-<nav>
-    <a href="#burguers">Burguers</a>
-    <a href="#beirutes">Beirutes</a>
-    <a href="#petiscos">Petiscos</a>
-    <a href="#porcoes">Porções</a>
-    <a href="#drinks">Bebidas</a>
-</nav>
-
-<div class="container">
-
-    <section id="burguers">
-        <h2>🍔 Hamburguers</h2>
-        <div class="menu-grid">
-            <div class="item-card">
-                <h3>Tradicional</h3>
-                <p>Pão tradicional, hambúrguer bovino, muçarela, alface, tomate e molho de queijo.</p>
-            </div>
-            <div class="item-card">
-                <h3>Entrecot Grelhado</h3>
-                <p>Pão tradicional, hambúrguer de entrecot bovino 180g, gorgonzola, muçarela, cebola caramelizada, maionese verde, rúcula e tomate.</p>
-            </div>
-            <div class="item-card">
-                <h3>Costela</h3>
-                <p>Pão com gergelim, hambúrguer bovino 250g, cheddar, molho de mostarda e ervas, alface e bacon.</p>
-            </div>
-            <div class="item-card">
-                <h3>Dois Queijos Com Bacon</h3>
-                <p>Pão com gergelim, hambúrguer bovino 180g, bacon, muçarela, cheddar, alface, tomate, cebola roxa marinada, picles e maionese de mostarda com ervas.</p>
-            </div>
-            <div class="item-card">
-                <h3>Frango</h3>
-                <p>Pão com gergelim, hambúrguer de frango 180g, ovo, muçarela, maionese de mostarda com ervas, tomate e champignon.</p>
-            </div>
-            <div class="item-card">
-                <h3>Vegano</h3>
-                <p>Pão vegano, hambúrguer Fazenda do Futuro, cebola roxa marinada, maionese, alface e tomate.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="list-section">
-        <div id="beirutes">
-            <h2>🥙 Beirutes</h2>
-            <ul class="simple-list">
-                <li>Gado (Pão sírio, ovo, queijo, presunto...)</li>
-                <li>Frango (Pão sírio, ovo, queijo, presunto...)</li>
-                <li>Vegetariano (Tomate seco, ricota e rúcula)</li>
-            </ul>
-        </div>
-        <div id="petiscos">
-            <h2>🍢 Espetinhos</h2>
-            <ul class="simple-list">
-                <li>Tradicional de Carne</li>
-                <li>Frango Com Bacon</li>
-                <li>Xixo / Coração / Entrecot</li>
-                <li>Carne E Bacon</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="porcoes">
-        <h2>🍟 Porções & Salgados</h2>
-        <div class="menu-grid">
-            <div class="item-card">
-                <h3>Batatas & Polenta</h3>
-                <p>Frita ou Rústica, Polenta Frita ou Anéis de Cebola <span class="badge">200g / 400g</span></p>
-            </div>
-            <div class="item-card">
-                <h3>Coxinhas</h3>
-                <p>Frango tradicional ou com Catupiry <span class="badge">6 unidades</span></p>
-            </div>
-            <div class="item-card">
-                <h3>Quiches & Tartelettes</h3>
-                <p>Loraine, Palmito, Quatro Queijos, Brócolis, Frango ou Camarão.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="drinks">
-        <h2>🍹 Drinks & Chopp</h2>
-        <div class="menu-grid">
-            <div class="item-card">
-                <h3>Drinks Especiais</h3>
-                <p>Caipirinha, Aperol Spritz, Alexander, Gin Tônica e Gin Blue.</p>
-            </div>
-            <div class="item-card">
-                <h3>Chopp Maria Santa</h3>
-                <p>Pilsen e APA nos tamanhos 300ml e 473ml.</p>
-            </div>
-            <div class="item-card">
-                <h3>Vinhos & Quentão</h3>
-                <p>Taça de vinho (tinto ou branco) e Caneca de Quentão.</p>
-            </div>
-        </div>
-    </section>
-
+<div class="topbar">
+📞 (55) 3221-5297 | Segunda a Sábado das 11h às 14h30
 </div>
 
+<header>
+<h1>Quintal 155</h1>
+<p>O sabor que reúne amigos 🍔🔥</p>
+<a href="#menu" class="btn">Ver Cardápio</a>
+</header>
+
+<section id="menu">
+<h2>🍔 Hambúrgueres</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Tradicional</h3>
+<p>Pão tradicional, hambúrguer bovino, alface, tomate e molho especial.</p>
+<p class="price">R$ 28,90</p>
+<a class="order-btn" href="https://wa.me/555532215297?text=Quero%20o%20Hambúrguer%20Tradicional" target="_blank">Pedir Agora</a>
+</div>
+
+<div class="card">
+<h3>Entrecot Grelhado</h3>
+<p>180g, gorgonzola, muçarela, rúcula e maionese verde.</p>
+<p class="price">R$ 39,90</p>
+<a class="order-btn" href="https://wa.me/555532215297?text=Quero%20o%20Entrecot%20Grelhado" target="_blank">Pedir Agora</a>
+</div>
+
+<div class="card">
+<h3>Costela 260g</h3>
+<p>Cheddar, mostarda com ervas, alface e bacon.</p>
+<p class="price">R$ 42,90</p>
+<a class="order-btn" href="https://wa.me/555532215297?text=Quero%20o%20Hambúrguer%20de%20Costela" target="_blank">Pedir Agora</a>
+</div>
+
+</div>
+</section>
+
+<section class="info">
+<h2>📍 Localização</h2>
+<p>R. Motorista Mariano, 155 - Nossa Sra. das Dores</p>
+<p>Santa Maria - RS, 97050-510</p>
+
+<iframe 
+src="https://www.google.com/maps?q=R.+Motorista+Mariano,+155+-+Nossa+Sra.+das+Dores,+Santa+Maria+-+RS&output=embed">
+</iframe>
+
+<h2 style="margin-top:40px;">💳 Formas de Pagamento</h2>
+<p>✔ PIX</p>
+<p>✔ Cartão de Crédito e Débito</p>
+<p>✔ Dinheiro</p>
+
+<h2 style="margin-top:40px;">📸 Redes Sociais</h2>
+<p><a href="#" style="color:#ff9500;text-decoration:none;">Instagram @quintal155</a></p>
+</section>
+
 <footer>
-    <p><strong>QUINTAL 155</strong></p>
-    <p>Endereço do Quintal, 155 - Centro | (00) 0000-0000</p>
-    <p>&copy; 2026 - Todos os direitos reservados</p>
+<p>© 2026 Quintal 155 - Todos os direitos reservados</p>
+<p>📞 (55) 3221-5297</p>
 </footer>
+
+<a class="whatsapp" 
+href="https://wa.me/555532215297?text=Olá%20Quintal%20155,%20gostaria%20de%20fazer%20um%20pedido!" 
+target="_blank">
+WhatsApp
+</a>
 
 </body>
 </html>
